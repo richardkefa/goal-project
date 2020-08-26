@@ -10,6 +10,8 @@ import { StrikethroughDirective } from './strikethrough.directive';
 import { DateCountPipe } from './date-count.pipe';
 import { GoalFormComponent } from './goal-form/goal-form.component';
 import { from } from 'rxjs';
+import { GoalService } from './goal-service/goal.service';
+import { ArrayconverterPipe } from './arrayconverter.pipe'
 
 @NgModule({
   declarations: [
@@ -18,14 +20,15 @@ import { from } from 'rxjs';
     GoalDetailComponent,
     StrikethroughDirective,
     DateCountPipe,
-    GoalFormComponent
+    GoalFormComponent,
+    ArrayconverterPipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [GoalService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
